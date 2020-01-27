@@ -3,6 +3,7 @@
     <head>
         <title>Hamburger Royale</title>
         <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="views/style.css">
     </head>
     <body>
         <main>
@@ -29,13 +30,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>900 calories</td>
-                            <td>1200 calories</td>
-                            <td>800 calories</td>
-                        </tr>
-                        <tr>
                             <td>
                                 <ul>
+                                    <li>900 calories</li>
                                     <li>Contains gluten</li>
                                     <li>Lactose free</li>
                                     <li>Good value!</li>
@@ -43,6 +40,7 @@
                             </td>
                             <td>
                                 <ul>
+                                    <li>1200 calories</li>
                                     <li>Double patties</li>
                                     <li>Contains gluten</li>
                                     <li>Contains lactose</li>
@@ -50,6 +48,7 @@
                             </td>
                             <td>
                                 <ul>
+                                    <li>800 calories</li>
                                     <li>Vegan</li>
                                     <li>New burger!</li>
                                     <li>Eco friendly</li>
@@ -59,10 +58,8 @@
                     </tbody>
                 </table>
             </section>
-            <section>
-                <h2>Customer info</h2>
-                <p>Customer info goes here</p>
-            </section>
+            <h2>Customer info</h2>
+            <p>Customer info goes here</p>
             <section>
                 <h3>Delivery information</h3>
                 <p>
@@ -74,7 +71,7 @@
                     <input type="text" id="street" name="st" placeholder="Street" />
                 </p>
                 <p>
-                    <label for="housenum">House Number</label><br>
+                    <label for="housenum">House number</label><br>
                     <input type="text" id="housenum" name="num" placeholder="House number" />
                 </p>
                 <p>
@@ -82,6 +79,26 @@
                     <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
                 </p>
             </section>
+            <section>
+                <p>
+                    <label for="paymentmethod">Payment method</label><br />
+                    <select id="paymentmethod" name="pm">
+                        <option>Credit card</option selected="selected">
+                        <option>Swish</option>
+                        <option>Bank transfer</option>
+                        <option>14 day payment plan</option>
+                    </select>
+                </p>
+            </section>
+            <section>
+                <h3>Gender</h3>
+                <input type="radio" name="gender" value="male" > Male
+                <input type="radio" checked name="gender" value="female" > Female
+                <input type="radio" name="gender" value="other" > Other
+                <input type="radio" name="gender" value="rathernot" > Rather not say
+            </section>
+            <!-- button type="submit"><img src="https://freeiconshop.com/wp-content/uploads/edd/checkmark-flat.png" /> Send Info</button-->
+            <input type="submit" value="Place order" />
         </main>
         <footer>
             <p>©Made up company Inc</p>
