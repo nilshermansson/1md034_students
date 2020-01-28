@@ -5,3 +5,13 @@ body {
     font-size: 1.2em;
 
 }
+
+.allergies {
+    color: white;
+
+}
+
+
+#allergies {
+    font-weight:bold;
+}
