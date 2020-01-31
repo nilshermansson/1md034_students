@@ -9,58 +9,45 @@
     <body>
         <main>
             <figure>
-                <h1>Welcome to Hamburger Royale</h1>
                 <img id="headerpic" src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1556596185000/photosp/ea29eed9-c59d-4180-8974-88da735b2bea/stock-photo-blur-abstract-bar-bright-bokeh-board-background-blank-table-top-backdrop-ea29eed9-c59d-4180-8974-88da735b2bea.jpg">
+                <h1 id="heading">Welcome to Hamburger Royale</h1>
             </figure>
             <section id="burgers">
                 <h2>Select burger</h2>
                 <p>This is the section where you select your burger</p>
-                <table>
-                    <thead>
-                        <th>The nice size burger</th>
-                        <th>King burger deluxe</th>
-                        <th>Veggie delight xxl</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img src="https://www.burgerdudes.se/wp-content/uploads/2018/09/shadyburger_basic_burger_stefan_med.jpg" alt="The nice size burger" width="200" >
-                            </td>
-                            <td>
-                                <img src="https://i.ytimg.com/vi/L6yX6Oxy_J8/maxresdefault.jpg" alt="King burger deluxe" width="200" >
-                            </td>
-                            <td>
-                                <img src="https://veganheaven.org/wp-content/uploads/2018/06/Cauliflower-Burger-Vegan-Super-Crispy-11-500x500.jpg" alt="Veggie delight xl" width="200" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>900 calories</li>
-                                    <li>Contains <span id="allergies">gluten</span></li>
-                                    <li>Lactose free</li>
-                                    <li>Good value!</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>1200 calories</li>
-                                    <li>Double patties</li>
-                                    <li>Contains <span id="allergies">gluten</span></li>
-                                    <li>Contains <span id="allergies">lactose</span></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>800 calories</li>
-                                    <li>Vegan</li>
-                                    <li>New burger!</li>
-                                    <li>Eco friendly</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div class="wrapper">
+                    <div class="box a">
+                        <h5>The nice size burger</h5>
+                        <img src="https://www.burgerdudes.se/wp-content/uploads/2018/09/shadyburger_basic_burger_stefan_med.jpg" alt="The nice size burger" width="200" >
+                        <ul>
+                            <li>900 calories</li>
+                            <li>Contains <span id="allergies">gluten</span></li>
+                            <li>Lactose free</li>
+                            <li>Good value!</li>
+                        </ul>
+                    </div>
+                    <div class="box b">
+                        <h5> King Burger Deluxe </h5>
+                        <img src="https://i.ytimg.com/vi/L6yX6Oxy_J8/maxresdefault.jpg" alt="King burger deluxe" width="200" >
+                        <ul>
+                            <li>1200 calories</li>
+                            <li>Double patties</li>
+                            <li>Contains <span id="allergies">gluten</span></li>
+                            <li>Contains <span id="allergies">lactose</span></li>
+                        </ul>
+                    </div>
+                    <div class="box c">
+                        <h5>Veggie delight xxl</h5>
+                        <img src="https://veganheaven.org/wp-content/uploads/2018/06/Cauliflower-Burger-Vegan-Super-Crispy-11-500x500.jpg" alt="Veggie delight xl" width="200" >
+                        <ul>
+                            <li>800 calories</li>
+                            <li>Vegan</li>
+                            <li>New burger!</li>
+                            <li>Eco friendly</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <section id="order">
                 <h2>Customer info</h2>

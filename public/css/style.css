@@ -22,23 +22,36 @@ body {
 
 figure{
     margin-left: 10px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    height: 300px;
 }
 
-
 section{
-    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
+}
+
+#heading{
+    position: absolute;
+    margin-top: -750px;
+}
+
+head{
+    padding-bottom: 0px;
+    margon-bottom: 0px;
 }
 
 #headerpic{
     opacity: 0.7;
+    width: 100%;
+    height: auto;
 }
 
 input[type="radio"]{
     height: 0.7em;
     width: 0.7em;
 }
-
 
 button{
     margin-top: 50px;
@@ -50,11 +63,35 @@ button:hover{
 }
 
 
-table {
-    text-align:left;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 60%;
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 400px 400px 400px;
+    background-color: black;
+    color: black;
 }
 
+.box {
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
 
+.a {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.b {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.c {
+    grid-column: 3;
+    grid-row: 1;
+}
