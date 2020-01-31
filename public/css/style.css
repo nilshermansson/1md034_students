@@ -19,11 +19,19 @@ body {
 }
 
 
+section{
+    margin-top: 100px;
+}
+
 input[type="radio"]{
     height: 0.7em;
     width: 0.7em;
 }
 
+
+button{
+    margin-top: 50px;
+}
 
 button:hover{
     color:blue;
