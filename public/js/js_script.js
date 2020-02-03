@@ -20,12 +20,33 @@ let bigboy = new menuItem("The Big Boy", 1300, true, true, "It's big!", "https:/
 
 let chicken = new menuItem("The Chicken Nugget Burger", 850, true, false, "Contains Chicken", "https://i.pinimg.com/originals/ba/ff/d9/baffd95b284f21e019a7a07ffb9d6d7e.jpg");
 
-console.log(nicesize.info());
-console.log(longboy.info());
-console.log(veggie.info());
-console.log(bigboy.info());
-console.log(chicken.info());
+let list = document.createElement('ul');
 
+let li1 = document.createElement('li');
+let li2 = document.createElement('li');
+let li3 = document.createElement('li');
+let li4 = document.createElement('li');
+let li5 = document.createElement('li');
+
+let txt1 = document.createTextNode(nicesize.info());
+let txt2 = document.createTextNode(longboy.info());
+let txt3 = document.createTextNode(veggie.info());
+let txt4 = document.createTextNode(bigboy.info());
+let txt5 = document.createTextNode(chicken.info());
+
+li1.appendChild(txt1);
+li2.appendChild(txt2);
+li3.appendChild(txt3);
+li4.appendChild(txt4);
+li5.appendChild(txt5);
+
+list.appendChild(li1);
+list.appendChild(li2);
+list.appendChild(li3);
+list.appendChild(li4);
+list.appendChild(li5);
+
+document.getElementById("myID").appendChild(list);
 
 
 
