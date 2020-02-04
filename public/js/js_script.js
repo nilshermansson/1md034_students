@@ -48,5 +48,21 @@ list.appendChild(li5);
 
 document.getElementById("myID").appendChild(list);
 
+var burgers = [nicesize, longboy, veggie, bigboy, chicken];
+
+var list2 = document.createElement("ul");
+
+for (var burger in burgers){
+	  var li = document.createElement('li');
+    var txt = document.createTextNode(x.name);
+    li.appendChild(txt);
+    list.appendChild(li);
+}
+
+
+document.getElementById("myID").appendChild(list);
+
+
+
 
 
