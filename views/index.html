@@ -5,8 +5,9 @@
         <meta charset="utf-8"/>
         <!-- link rel="stylesheet" type="text/css" href="css/reset.css"-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/js_script.js" ></script>
-        <script src="https://vuejs.org/js/vue.js"></script>
+        <script src="js/js_script.js" defer></script>
+        <script src="https://vuejs.org/js/vue.js" defer></script>
+        <script src="js/vue_script.js" defer></script>
     </head>
     <body>
         <main>
@@ -18,35 +19,15 @@
                 <h2>Select burger</h2>
                 <p>This is the section where you select your burger</p>
 
-                <div class="wrapper">
-                    <div class="box a">
-                        <h3>The nice size burger</h3>
-                        <img class="burgerpic" src="https://www.burgerdudes.se/wp-content/uploads/2018/09/shadyburger_basic_burger_stefan_med.jpg" alt="The nice size burger" width="200" >
+                <div id="menu" class="wrapper">
+                    <div v-for="burger in burgers" >
+                        <h3> {{burger.name}} </h3>
+                        <img v-bind:src="burger.source" width="250" height="250" >
                         <ul>
-                            <li>900 calories</li>
-                            <li>Contains <span id="allergies">gluten</span></li>
-                            <li>Lactose free</li>
-                            <li>Good value!</li>
-                        </ul>
-                    </div>
-                    <div class="box b">
-                        <h3> The Long Boy </h3>
-                        <img class ="burgerpic" src="https://i.ytimg.com/vi/L6yX6Oxy_J8/maxresdefault.jpg" alt="The long boy" width="200" >
-                        <ul>
-                            <li>1200 calories</li>
-                            <li>Double patties</li>
-                            <li>Contains <span id="allergies">gluten</span></li>
-                            <li>Contains <span id="allergies">lactose</span></li>
-                        </ul>
-                    </div>
-                    <div class="box c">
-                        <h3>Veggie delight xxl</h3>
-                        <img class="burgerpic" src="https://veganheaven.org/wp-content/uploads/2018/06/Cauliflower-Burger-Vegan-Super-Crispy-11-500x500.jpg" alt="Veggie delight xl" width="200" >
-                        <ul>
-                            <li>800 calories</li>
-                            <li>Vegan</li>
-                            <li>New burger!</li>
-                            <li>Eco friendly</li>
+                            <li>{{burger.special}}</li>
+                            <li>kcal: {{burger.kcal}}</li>
+                            <li v-if="burger.glut">contains <b>gluten</b></li>
+                            <li v-if="burger.lact">contains <b>lactose</b></li>
                         </ul>
                     </div>
                 </div>
@@ -89,7 +70,6 @@
             <button type="submit"><img src="https://cdn.imgbin.com/17/11/4/imgbin-check-mark-computer-icons-ok-symbol-green-check-illustration-SmJKRyF4rXtPn1RBaDLr2R88p.jpg" width="30" height="25" /> Send Info</button>
         </main>
         <footer>
-            <script src="js/vue_script.js"></script>
             <p>©Made up company Inc</p>
         </footer>
     </body>
