@@ -25,7 +25,7 @@ let food = [
         "lact": false,
         "glut": false,
         "src": "https://veganheaven.org/wp-content/uploads/2018/06/Cauliflower-Burger-Vegan-Super-Crispy-11-500x500.jpg",
-        "special": "Good Value!"
+        "special": "Vegan!"
 
     },
 

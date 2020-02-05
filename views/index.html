@@ -29,6 +29,7 @@
                             <li>kcal: {{burger.kcal}}</li>
                             <li v-if="burger.glut">contains <b>gluten</b></li>
                             <li v-if="burger.lact">contains <b>lactose</b></li>
+                            <input v-model="selectedBurgers" type="checkbox" v-bind:value="burger.name" v-bind:name="burger.name"> Order!
                         </ul>
                     </div>
                 </div>
@@ -63,12 +64,17 @@
                     </select>
                 </p>
                 <h3>Gender</h3>
-                <input type="radio" name="gender" value="male" > Male
-                <input type="radio" checked name="gender" value="female" > Female
-                <input type="radio" name="gender" value="other" > Other
-                <input type="radio" name="gender" value="rathernot" > Rather not say
+                <input type="radio" name="gender" value="Male" > Male
+                <input type="radio" checked name="gender" value="Female" > Female
+                <input type="radio" name="gender" value="Other" > Other
+                <input type="radio" name="gender" value="Rather not say" > Rather not say
+                <button v-on:click="submitOrder" id="makeOrder" type="submit"><img src="https://cdn.imgbin.com/17/11/4/imgbin-check-mark-computer-icons-ok-symbol-green-check-illustration-SmJKRyF4rXtPn1RBaDLr2R88p.jpg" width="30" height="25" /> Send Info</button>
+                <p v-for="info in userInfo">
+                    {{info}}
+                </p>
+                <p>
+                    <span v-for="burger in selectedBurgers"> {{burger}} </span>
             </section>
-            <button type="submit"><img src="https://cdn.imgbin.com/17/11/4/imgbin-check-mark-computer-icons-ok-symbol-green-check-illustration-SmJKRyF4rXtPn1RBaDLr2R88p.jpg" width="30" height="25" /> Send Info</button>
         </main>
         <footer>
             <p>©Made up company Inc</p>
