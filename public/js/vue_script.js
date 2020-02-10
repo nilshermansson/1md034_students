@@ -69,15 +69,6 @@ const vo = new Vue({
         },
 
         addOrder: function() {
-            socket.emit('addOrder', {
-                orderId: this.orderNum,
-                details: {
-                    x: this.target.x,
-                    y: this.target.y,
-                },
-                orderItems: vm.selectedBurgers
-            });
-            this.orderNum = this.orderNum + 1;
 
             console.log(this.target);
             this.fullname = "Name: " + document.getElementById("fullname").value;
@@ -90,6 +81,17 @@ const vo = new Vue({
             this.userInfo = [this.fullname, this.street, this.email, this.housenum, this.payment, this.gender, this.selectedBurger];
 
             this.selectedBurgers = vm.selectedBurgers;
+            socket.emit('addOrder', {
+                orderId: this.orderNum,
+                details: {
+                    x: this.target.x,
+                    y: this.target.y,
+                },
+                orderItems: vm.selectedBurgers,
+                userInfo: this.userInfo
+            });
+            this.orderNum = this.orderNum + 1;
+
         },
 
     }
