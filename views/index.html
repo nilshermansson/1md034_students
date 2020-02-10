@@ -4,6 +4,7 @@
         <title>Hamburger Royale</title>
         <meta charset="utf-8"/>
         <!-- link rel="stylesheet" type="text/css" href="css/reset.css"-->
+        <script src="/socket.io/socket.io.js" defer></script>
         <script type="text/javascript" src="js/menu.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/js_script.js" defer></script>
@@ -43,17 +44,20 @@
                     <input type="text" id="fullname" name="fn" required="required" placeholder="Full name" />
                 </p>
                 <p>
-                    <label for="street">Street</label><br>
-                    <input type="text" id="street" name="st" placeholder="Street" />
-                </p>
-                <p>
-                    <label for="housenum">House number</label><br>
-                    <input type="text" id="housenum" name="num" placeholder="House number" />
-                </p>
-                <p>
                     <label for="email" >Email</label><br>
                     <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
                 </p>
+                <h1> Click in the map! </h1>
+                <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+                <div class="view-box">
+                    <div id="dots" v-on:click="addOrder">
+                        <div
+                            v-for="(order, key) in orders"
+                            v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                            {{key}}
+                        </div>
+                    </div>
+                </div>
                 <p>
                     <label for="paymentmethod">Payment method</label><br />
                     <select id="paymentmethod" name="pm">
