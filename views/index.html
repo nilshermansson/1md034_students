@@ -50,11 +50,10 @@
                 <h1> Click in the map! </h1>
                 <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
                 <div class="view-box">
-                    <div id="dots" v-on:click="addOrder">
+                    <div id="dots" v-on:click="displayOrder">
                         <div
-                            v-for="(order, key) in orders"
-                            v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-                            {{key}}
+                            v-bind:style="{ left: target.x + 'px', top: target.y + 'px'}">
+                            T
                         </div>
                     </div>
                 </div>
@@ -72,7 +71,7 @@
                 <input type="radio" checked name="gender" value="Female" > Female
                 <input type="radio" name="gender" value="Other" > Other
                 <input type="radio" name="gender" value="Rather not say" > Rather not say
-                <button v-on:click="submitOrder" id="makeOrder" type="submit"><img src="https://cdn.imgbin.com/17/11/4/imgbin-check-mark-computer-icons-ok-symbol-green-check-illustration-SmJKRyF4rXtPn1RBaDLr2R88p.jpg" width="30" height="25" /> Send Info</button>
+                <button v-on:click="addOrder" id="makeOrder" type="submit"><img src="https://cdn.imgbin.com/17/11/4/imgbin-check-mark-computer-icons-ok-symbol-green-check-illustration-SmJKRyF4rXtPn1RBaDLr2R88p.jpg" width="30" height="25" /> Send Info</button>
                 <p v-for="info in userInfo">
                     {{info}}
                 </p>
