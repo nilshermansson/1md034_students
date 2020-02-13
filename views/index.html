@@ -72,11 +72,13 @@
                 <input type="radio" name="gender" value="Other" > Other
                 <input type="radio" name="gender" value="Rather not say" > Rather not say
                 <button v-on:click="addOrder" id="makeOrder" type="submit"><img src="https://cdn.imgbin.com/17/11/4/imgbin-check-mark-computer-icons-ok-symbol-green-check-illustration-SmJKRyF4rXtPn1RBaDLr2R88p.jpg" width="30" height="25" /> Send Info</button>
-                <p v-for="info in userInfo">
+
+                <p v-for="info in userInfo" >
                     {{info}}
                 </p>
                 <p>
-                    <span v-for="burger in selectedBurgers"> {{burger}} </span>
+                    <span v-for="burger in selectedBurgers" > {{burger}} </span>
+                </p>
             </section>
         </main>
         <footer>

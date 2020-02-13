@@ -91,9 +91,20 @@ const vo = new Vue({
                 userInfo: this.userInfo
             });
             this.orderNum = this.orderNum + 1;
-
+            vs.displayToggle = "true";
         },
 
     }
 
+});
+const vs = new Vue({
+
+    el: '#orderSummary',
+
+    data: {
+        displayToggle: "none"
+    },
+    methods: {
+
+    }
 });
